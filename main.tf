@@ -2,12 +2,12 @@ provider "google" {
   version = "~> 3.67.0"
   project = var.project
   region  = var.region
-  credentials = file("credentials.json")
+  credentials = file("C:\Users\annabattula.sridevi\Downloads")
 }
 
 # New resource for the storage bucket our application will use.
 resource "google_storage_bucket" "static-site" {
-  name     = "csk2021"
+  name     = "sri"
   location = "US"
 
   website {
@@ -65,8 +65,4 @@ resource "google_compute_instance" "webserver" {
     name = "webserver"
   }
 }
-resource "null_resource" "git_clone" {
-  provisioner "local-exec" {
-    command = "git clone https://github.com/sricharankoyalkar/spring-mvc-login.git"
-  }
-}
+
