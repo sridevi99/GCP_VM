@@ -1,1 +1,1 @@
-# gcp-vpc-vm
+# gcp-vm
